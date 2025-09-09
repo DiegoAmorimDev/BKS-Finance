@@ -15,7 +15,7 @@ public static class SwaggerExtensions
             {
                 Title = "APi Sdk Sample",
                 Version = "v1.0.0",
-                Description = "API para processamento de transações financeiras usando bks-sdk",
+                Description = "API para gerencia de produtos usando bks-sdk",
                 Contact = new OpenApiContact
                 {
                     Name = "Equipe Backside",

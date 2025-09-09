@@ -1,5 +1,5 @@
 using Adapters.Inbound.API.Extensions;
-using Configuration; // Para encontrar o ConfigureApiInjections
+using Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -15,11 +15,9 @@ var configuration = new ConfigurationBuilder()
     .Build();
 
 // --- 2. Delegar a Configuração dos Serviços ---
-// Esta única linha agora chama o MainConfiguration e o WebApiExtensions.
 builder.Services.ConfigureAPI(configuration);
 
 var app = builder.Build();
 
 // --- 3. Delegar a Configuração do Pipeline ---
-// Esta única linha agora configura o Swagger, os middlewares do SDK e os endpoints.
 app.UseAPIExtensions();

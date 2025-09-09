@@ -1,10 +1,14 @@
 ﻿using Domain.Core.Entities;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
-namespace Domain.Core.Ports.Outbound
+namespace Domain.Core.Ports.Outbound;
+
+public interface IProdutoRepository
 {
-    public interface IProdutoRepository
-    {
-        // Apenas um método para o nosso teste
-        Task<Produto> SalvarAsync(Produto produto, CancellationToken cancellationToken);
-    }
+    Task<Produto> SalvarAsync(Produto produto, CancellationToken cancellationToken);
+    Task<Produto?> GetByIdAsync(int id, CancellationToken cancellationToken);
+    Task<IEnumerable<Produto>> GetAllAsync(CancellationToken cancellationToken);
+    Task<bool> DeleteAsync(int id, CancellationToken cancellationToken);
 }
