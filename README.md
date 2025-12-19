@@ -1,4 +1,8 @@
-﻿# BKS Finance — Expense Control (Full Stack)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/bks-sdk/bks-sdk)
+[![.NET](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com/)
+[![License](https://img.shields.io/badge/license-proprietary-red.svg)]()
+ 
+ # BKS Finance — Expense Control (Full Stack)
 
 Sistema completo de **Controle de Gastos Residenciais**, composto por um **Backend em .NET 8** e um **Frontend moderno em React + TypeScript**.  
 A solução foi projetada com forte foco em **arquitetura limpa**, **boas práticas**, **performance** e **escalabilidade**, refletindo padrões utilizados em ambientes profissionais.
@@ -18,7 +22,7 @@ Cada módulo segue princípios sólidos de separação de responsabilidades.
 
 # 🔙 Backend — BKS Finance API
 
-Este módulo contém o **core do sistema**, desenvolvido em **.NET 8** utilizando o **BKS SDK**.  
+Este módulo contém o **core do sistema**, desenvolvido em **.NET 8** utilizando o **BKS SDK**, que foi desenvolvido em outro projeto em conjunto com o colaborador que consta nas referências.  
 A arquitetura segue **Clean Architecture** e **Domain-Driven Design (DDD)**, garantindo um domínio desacoplado de infraestrutura e frameworks. Conta com telemtria e tracing distribuído integrado ao  BKS-SDK, autenticação via token e outros adicionais.
 
 ---
@@ -88,6 +92,14 @@ Integrações externas.
 ### 🔞 Restrição de Idade
 - Menores de 18 anos **não podem registrar receitas**
 - Apenas transações do tipo **Despesa**
+
+---
+
+## 📊 Observabilidade
+
+### Telemetria e Tracing Distribuído
+- Integração de Opentelemetry com Jaeger
+- Envio via porta otlp (deve ser alterada conforme o ambiente).
 
 ---
 
@@ -273,9 +285,24 @@ Endpoints consumidos atualmente:
 ## 👨‍💻 Autor
 
 **Diego Amorim**  
-Engenharia de Software • Arquitetura • Full Stack • Clean Architecture
+Engenharia de Software • Desenvolvedor Full-Stack
 
 ---
+
+## 👨‍💻 BKS-SDK Créditos
+
+O uso do SDK que foi desenvolvido em conjunto, pelos dois contribuidores
+
+**Luis Fábio**  
+Arquiteto de Software
+
+**Diego Amorim**  
+Desenvolvedor Full-Stack
+
+- https://github.com/luisfabiosm/bks.sdk
+
+---
+
 
 ## 📌 Próximos Passos
 
