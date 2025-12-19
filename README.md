@@ -1,4 +1,8 @@
-﻿# BKS Finance — Expense Control (Full Stack)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/bks-sdk/bks-sdk)
+[![.NET](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com/)
+[![License](https://img.shields.io/badge/license-proprietary-red.svg)]()
+ 
+ # BKS Finance — Expense Control (Full Stack)
 
 Sistema completo de **Controle de Gastos Residenciais**, composto por um **Backend em .NET 8** e um **Frontend moderno em React + TypeScript**.  
 A solução foi projetada com forte foco em **arquitetura limpa**, **boas práticas**, **performance** e **escalabilidade**, refletindo padrões utilizados em ambientes profissionais.
