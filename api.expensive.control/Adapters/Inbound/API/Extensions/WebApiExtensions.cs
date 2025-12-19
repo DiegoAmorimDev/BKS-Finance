@@ -14,10 +14,10 @@ public static class WebApiExtensions
         services.AddEndpointsApiExplorer();
         services.ConfigureSwagger();
 
-        // ADICIONE ESTA LINHA PARA REGISTAR OS SERVIÇOS DE HEALTH CHECK
+        //SERVIÇOS DE HEALTH CHECK (não serão usados nesse sistema)
         services.AddHealthChecks();
 
-        // Esta chamada continua a ser responsável por configurar o SDK e as dependências da sua aplicação
+        // Esta é responsável por configurar o SDK e as dependências da aplicação
         services.ConfigureApiInjections(configuration);
 
         return services;
@@ -33,10 +33,10 @@ public static class WebApiExtensions
         app.UseAuthentication();
         app.UseAuthorization();
 
-        // Esta linha agora funcionará, pois os serviços foram registados
+        
         app.MapHealthChecks("/health");
 
-        // ADICIONE ESTA LINHA PARA INICIAR A APLICAÇÃO
+        
         app.Run();
     }
 }

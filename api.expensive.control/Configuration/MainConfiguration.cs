@@ -56,7 +56,7 @@ public static class MainConfiguration
         services.AddScoped<IBKSRequestHandler<GetTotalsByPersonQuery, FullReportResponse>, GetTotalsByPersonQueryHandler>();
 
         // 4. PERSISTÊNCIA REAL (POSTGRES)
-        // Substituímos os Singleton (In-Memory) pela extensão que criámos para o SQL Adapter
+        
         services.AddSQLAdapter(configuration);
 
 

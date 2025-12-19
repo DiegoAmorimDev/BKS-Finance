@@ -9,6 +9,8 @@ public class CreateCategoryCommandHandler : IBKSRequestHandler<CreateCategoryCom
     private readonly ICategoryRepository _categoryRepository;
     private readonly ILogger<CreateCategoryCommandHandler> _logger;
 
+    // Injetando o logger e o repositório.
+
     public CreateCategoryCommandHandler(ICategoryRepository categoryRepository, ILogger<CreateCategoryCommandHandler> logger)
     {
         _categoryRepository = categoryRepository;

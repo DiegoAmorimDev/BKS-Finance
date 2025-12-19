@@ -29,7 +29,7 @@ public class Transaction
     private Transaction() { }
 
     // Método para o Dapper preencher os campos se as colunas forem snake_case no banco
-    // Ou você pode adicionar um construtor que combine com a assinatura do erro
+   
     public Transaction(Guid id, string description, decimal value, int type, Guid category_id, Guid person_id, DateTime created_at)
     {
         Id = id;
