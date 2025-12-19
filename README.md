@@ -18,7 +18,7 @@ Cada módulo segue princípios sólidos de separação de responsabilidades.
 
 # 🔙 Backend — BKS Finance API
 
-Este módulo contém o **core do sistema**, desenvolvido em **.NET 8** utilizando o **BKS SDK**.  
+Este módulo contém o **core do sistema**, desenvolvido em **.NET 8** utilizando o **BKS SDK**, que foi desenvolvido em outro projeto em conjunto com o colaborador que consta nas referências.  
 A arquitetura segue **Clean Architecture** e **Domain-Driven Design (DDD)**, garantindo um domínio desacoplado de infraestrutura e frameworks. Conta com telemtria e tracing distribuído integrado ao  BKS-SDK, autenticação via token e outros adicionais.
 
 ---
@@ -273,9 +273,24 @@ Endpoints consumidos atualmente:
 ## 👨‍💻 Autor
 
 **Diego Amorim**  
-Engenharia de Software • Arquitetura • Full Stack • Clean Architecture
+Engenharia de Software • Desenvolvedor Full-Stack
 
 ---
+
+## 👨‍💻 BKS-SDK Créditos
+
+O uso do SDK que foi desenvolvido em conjunto, pelos dois contribuidores
+
+**Luis Fábio**  
+Arquiteto de Software
+
+**Diego Amorim**  
+Desenvolvedor Full-Stack
+
+- https://github.com/luisfabiosm/bks.sdk
+
+---
+
 
 ## 📌 Próximos Passos
 
