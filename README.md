@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/bks-sdk/bks-sdk)
+﻿[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/bks-sdk/bks-sdk)
 [![.NET](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com/)
 [![License](https://img.shields.io/badge/license-proprietary-red.svg)]()
  
@@ -8,6 +8,20 @@ Sistema completo de **Controle de Gastos Residenciais**, composto por um **Backe
 A solução foi projetada com forte foco em **arquitetura limpa**, **boas práticas**, **performance** e **escalabilidade**, refletindo padrões utilizados em ambientes profissionais.
 
 ---
+
+## 🖼️ Visual do Sistema (telas principais)
+
+| Dashboard Principal | Gestão de Transações |
+|---|---|
+| ![Dashboard](../docs/assets/dashboard-preview.png) | ![Transactions](../docs/assets/transactions-preview.png) |
+
+---
+
+## 🏗️ Arquitetura do Sistema (C4 Model)
+
+Abaixo, o diagrama de arquitetura seguindo o padrão C4 (Container/Component), demonstrando a segregação entre as camadas de domínio e os adaptadores de infraestrutura.
+
+![Diagrama C4](../docs/assets/c4-architecture.jpg)
 
 ## 🏗️ Visão Geral da Arquitetura
 
@@ -20,10 +34,22 @@ Cada módulo segue princípios sólidos de separação de responsabilidades.
 
 ---
 
-# 🔙 Backend — BKS Finance API
+O core do sistema foi desenvolvido em **.NET 8** focado em desacoplamento total.
 
-Este módulo contém o **core do sistema**, desenvolvido em **.NET 8** utilizando o **BKS SDK**, que foi desenvolvido em outro projeto em conjunto com o colaborador que consta nas referências.  
-A arquitetura segue **Clean Architecture** e **Domain-Driven Design (DDD)**, garantindo um domínio desacoplado de infraestrutura e frameworks. Conta com telemtria e tracing distribuído integrado ao  BKS-SDK, autenticação via token e outros adicionais.
+### 🧩 Padrões Utilizados
+* **Clean Architecture:** Separação clara de Domain, UseCases e Adapters.
+* **Mediator Pattern:** Orquestração de comandos e queries via BKS-SDK.
+* **Ports & Adapters:** Infraestrutura (PostgreSQL/Dapper) ligada apenas por interfaces.
+* **Observabilidade:** Rastreamento distribuído com **OpenTelemetry** e **Jaeger**.
+
+### 🛠️ Tecnologias
+* **.NET 8** & **C#**
+* **BKS-SDK:** (Mediator, Logging, Tracing Distribuído)
+* **Jaeger:** (Coleta de Tracing)
+* **Opentelemetry:** (Telemetria e Integração com Jaeger)
+* **Dapper:** Performance máxima em consultas SQL.
+* **PostgreSQL:** Banco de dados relacional.
+* **FluentValidation:** Validação de contratos de entrada.
 
 ---
 
@@ -87,11 +113,13 @@ Integrações externas.
 
 ---
 
-## 📐 Regras de Negócio
+## ⚖️ Regras de Negócio Implementadas
 
-### 🔞 Restrição de Idade
-- Menores de 18 anos **não podem registrar receitas**
-- Apenas transações do tipo **Despesa**
+O sistema não é apenas um CRUD, ele contém lógica de domínio rigorosa:
+
+1.  **Restrição de Idade (Compliance):** Menores de 18 anos são impedidos por regra de domínio de registrar **Receitas**. O sistema bloqueia automaticamente a interface e valida no backend.
+2.  **Filtro de Finalidade (Contexto):** Categorias são inteligentes. Uma categoria de "Material de Construção" (Despesa) não aparece se o usuário estiver tentando registrar um ganho.
+3.  **Integridade Referencial:** Implementado **Cascade Delete**. Ao remover um membro da residência, todo o seu histórico financeiro é saneado para manter a integridade dos relatórios.
 
 ---
 
