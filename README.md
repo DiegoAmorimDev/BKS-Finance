@@ -91,6 +91,14 @@ Integrações externas.
 
 ---
 
+## 📐 Observabilidade
+
+### Telemetria e Tracing Distribuído
+- Integração de Opentelemetry com Jaeger
+- Envio via porta otlp (deve ser alterada conforme o ambiente).
+
+---
+
 ### 🗂️ Vínculo de Categoria
 
 | Purpose | Valor | Descrição |
