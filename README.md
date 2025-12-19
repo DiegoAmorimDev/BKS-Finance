@@ -123,11 +123,22 @@ O sistema não é apenas um CRUD, ele contém lógica de domínio rigorosa:
 
 ---
 
-## 📊 Observabilidade
+## 📊 Observabilidade e Tracing
 
-### Telemetria e Tracing Distribuído
-- Integração de Opentelemetry com Jaeger
-- Envio via porta otlp (deve ser alterada conforme o ambiente).
+A aplicação utiliza o padrão **OpenTelemetry** através do **BKS-SDK** para exportar dados de telemetria estruturados. Isso permite o rastreamento completo da jornada de uma requisição (Distributed Tracing), desde a entrada na Minimal API até a persistência final no PostgreSQL.
+
+### 🕵️ Rastreamento com Jaeger
+Com o suporte ao protocolo **OTLP**, o sistema permite identificar gargalos de performance, falhas em handlers específicos e o tempo exato de execução das queries SQL.
+
+| Visualização de Traces Distribuídos (Jaeger UI) |
+|---|
+| ![Jaeger Traces](docs/assets/jaeger-tracing.png) |
+
+#### Como visualizar:
+1. Certifique-se de que o container do Jaeger está em execução (`port 16686`).
+2. Realize transações no Frontend ou via Swagger.
+3. Acesse: [http://localhost:16686](http://localhost:16686).
+4. Selecione o serviço `BKS.Finance.API` e clique em **Find Traces**.
 
 ---
 
