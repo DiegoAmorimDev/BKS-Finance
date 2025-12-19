@@ -19,11 +19,13 @@ Cada módulo segue princípios sólidos de separação de responsabilidades.
 # 🔙 Backend — BKS Finance API
 
 Este módulo contém o **core do sistema**, desenvolvido em **.NET 8** utilizando o **BKS SDK**.  
-A arquitetura segue **Clean Architecture** e **Domain-Driven Design (DDD)**, garantindo um domínio desacoplado de infraestrutura e frameworks.
+A arquitetura segue **Clean Architecture** e **Domain-Driven Design (DDD)**, garantindo um domínio desacoplado de infraestrutura e frameworks. Conta com telemtria e tracing distribuído integrado ao  BKS-SDK, autenticação via token e outros adicionais.
 
 ---
 
 ## 📦 Arquitetura do Backend
+
+### Domain-Driven Design, Ports and Adapters e Clean Architecture sendo refletidos no código, de forma a expressar o domínio dentro do projeto.
 
 ### Domain (Core)
 Camada central do negócio.
@@ -73,7 +75,7 @@ Integrações externas.
 ## 🛠️ Tecnologias — Backend
 
 - **.NET 8**
-- **BKS SDK** (Mediator, Logging, Tracing)
+- **BKS SDK** (Opentelemetry, Mediator, Logging, Tracing Distribuido)
 - **Dapper**
 - **PostgreSQL**
 - **Polly** (resiliência com retry)
