@@ -13,7 +13,7 @@ A solução foi projetada com forte foco em **arquitetura limpa**, **boas práti
 
 | Dashboard Principal | Gestão de Transações |
 |---|---|
-| ![Dashboard](../docs/assets/dashboard-preview.png) | ![Transactions](../docs/assets/transactions-preview.png) |
+| ![Dashboard](docs/assets/dashboard-preview.png) | ![Transactions](docs/assets/transactions-preview.png) |
 
 ---
 
@@ -21,7 +21,7 @@ A solução foi projetada com forte foco em **arquitetura limpa**, **boas práti
 
 Abaixo, o diagrama de arquitetura seguindo o padrão C4 (Container/Component), demonstrando a segregação entre as camadas de domínio e os adaptadores de infraestrutura.
 
-![Diagrama C4](../docs/assets/c4-architecture.jpg)
+![Diagrama C4](docs/assets/c4-architecture.jpg)
 
 ## 🏗️ Visão Geral da Arquitetura
 
