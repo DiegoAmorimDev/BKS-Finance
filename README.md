@@ -296,9 +296,10 @@ Endpoints consumidos atualmente:
 
 - [x] Fase 1 — Dashboard e integração básica
 - [X] Fase 2 — Gestão de Pessoas e Categorias
-- [ ] Fase 3 — Filtros por data e paginação
-- [ ] Fase 4 — Gráficos por categoria (Recharts)
-- [ ] Fase 5 — Autenticação JWT
+- [X] Fase 3 — Gráficos por categoria (Recharts)
+- [X] Fase 4 — Telemetria e tracing Distribuído
+- [X] Fase 5 — Validação de regras de negócio
+
 
 ---
 
@@ -332,9 +333,3 @@ Desenvolvedor Full-Stack
 ---
 
 
-## 📌 Próximos Passos
-
-- Implementar exclusão de transações
-- Criar Sidebar ou Navbar
-- Adicionar Toasts de feedback
-- Evoluir segurança e autenticação
