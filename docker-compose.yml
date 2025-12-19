@@ -1,0 +1,19 @@
+﻿services:
+  postgres:
+    image: postgres:latest
+    container_name: expense-control-db
+    environment:
+      # Credenciais de acesso ao banco
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpassword
+      POSTGRES_DB: expensecontroldb
+    ports:
+      # Mapeia a porta padrão do Postgres para a tua máquina local
+      - "5432:5432"
+    volumes:
+      # Garante que os dados não se perdem se o container for removido
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres_data:

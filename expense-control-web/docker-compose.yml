@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build: .
+    container_name: expense-control-web
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules # Protege o node_modules do container
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Garante que o Hot Reload funcione no Windows
