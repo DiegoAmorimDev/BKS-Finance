@@ -14,10 +14,22 @@ var configuration = new ConfigurationBuilder()
     .AddEnvironmentVariables()
     .Build();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // URL do seu React/Vite
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // --- 2. Delegar a Configuração dos Serviços ---
 builder.Services.ConfigureAPI(configuration);
 
 var app = builder.Build();
+
+app.UseCors(); // Deve vir ANTES do app.UseAPIExtensions()
 
 // --- 3. Delegar a Configuração do Pipeline ---
 app.UseAPIExtensions();
