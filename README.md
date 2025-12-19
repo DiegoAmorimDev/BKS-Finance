@@ -91,7 +91,7 @@ Integrações externas.
 
 ---
 
-## 📐 Observabilidade
+## 📊 Observabilidade
 
 ### Telemetria e Tracing Distribuído
 - Integração de Opentelemetry com Jaeger
