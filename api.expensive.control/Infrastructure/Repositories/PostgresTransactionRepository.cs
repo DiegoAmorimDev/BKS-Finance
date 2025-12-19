@@ -15,7 +15,7 @@ namespace Infrastructure.Repositories
         {
             await _dbAdapter.ExecuteWithRetryAsync(async (conn) =>
             {
-                // Removido o campo created_at do INSERT para alinhar com a Entidade.
+                
                 // O Banco de Dados usará o valor DEFAULT (NOW()).
                 const string sql = @"
                 INSERT INTO transactions (id, description, value, type, category_id, person_id) 
