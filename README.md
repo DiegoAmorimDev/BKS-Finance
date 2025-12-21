@@ -234,6 +234,7 @@ Foi desenvolvido com React 18, TypeScript e Tailwind CSS v4, mantendo alinhament
 
 ### Estrutura de pastas
 
+```text
 src/
 ├── components/   # Componentes reutilizáveis (Buttons, Cards, Inputs)
 ├── hooks/        # Hooks customizados
@@ -241,6 +242,8 @@ src/
 ├── types/        # Tipos e interfaces globais
 ├── views/        # Páginas (Dashboard, etc.)
 └── App.tsx       # Componente raiz
+```
+
 
 ## Configuração do Ambiente
 
